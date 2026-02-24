@@ -125,6 +125,10 @@ export class CannonSystem implements System {
         this._projectile = null;
     }
 
+    public killProjectile() {
+        this._projectile = null;
+    }
+
     /** The x-position of the cannon in game space. */
     public get cannonX(): number {
         return this.cannon.view.x;

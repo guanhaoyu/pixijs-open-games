@@ -123,6 +123,7 @@ export class PhysicsSystem implements System {
                 if (cannon.projectile) {
                     // Kill the bubble if it exists
                     bubble && level.killBubble(bubble);
+                    cannon.killProjectile();
                 }
             }
 
