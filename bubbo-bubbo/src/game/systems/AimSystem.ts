@@ -49,9 +49,9 @@ export class AimSystem implements System {
      */
     public game!: Game;
     /* The container instance that is the root of all visuals in this class. */
-    public view = new Container();
+    public view = new Container({ label: 'AimSystemView' });
     /* The container instance specifically stored the visual nodes. */
-    public nodeContainer = new Container();
+    public nodeContainer = new Container({ label: 'AimSystemNodeContainer' });
 
     /** An array of lines that make up the aiming trajectory. */
     private readonly _aimLines: Line[] = [];

@@ -27,7 +27,7 @@ export class Game {
     /** Original game container position to use as reset for screen shake effects. */
     public gameContainerPosition = new Point();
     /** Container to handle user interaction. */
-    public hitContainer = new Container();
+    public hitContainer = new Container({ label: 'GameHitContainer' });
     /** A system manager to handle the common functions found in systems. */
     public systems: SystemRunner;
     /** A class that deals with user specific stats. */

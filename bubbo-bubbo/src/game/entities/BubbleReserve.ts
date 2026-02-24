@@ -11,7 +11,7 @@ import { BubbleView } from './BubbleView';
  */
 export class BubbleReserve {
     /** The Container instance which contains all the visual elements for this class. */
-    public view = new Container();
+    public view = new Container({ label: 'BubbleReserveView' });
 
     /** An instance of the BubbleView class, representing the next bubble that will be shot from the cannon. */
     private _bubbleView: BubbleView;
@@ -23,7 +23,7 @@ export class BubbleReserve {
     private _base: Sprite;
 
     constructor() {
-        const baseWrapper = new Container();
+        const baseWrapper = new Container({ label: 'BubbleReserveBaseWrapper' });
         baseWrapper.scale.set(0.9);
         this.view.addChild(baseWrapper);
 
@@ -33,7 +33,7 @@ export class BubbleReserve {
         this._base.anchor.set(0.5);
         baseWrapper.addChild(this._base);
 
-        const ringWrapper = new Container();
+        const ringWrapper = new Container({ label: 'BubbleReserveRingWrapper' });
         ringWrapper.scale = 0.85;
         ringWrapper.y -= 2;
         baseWrapper.addChild(ringWrapper);
