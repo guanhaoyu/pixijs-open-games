@@ -1,0 +1,184 @@
+{
+	"files": [
+		{
+			"path": "src/game/systems/SpaceDecorSystem.ts",
+			"bookmarks": [
+				{
+					"line": 56,
+					"column": 0,
+					"label": "通过_tick,_frequency,_range计算得到的正弦波形旋转动画"
+				},
+				{
+					"line": 121,
+					"column": 0,
+					"label": "豆包建议加一句pool.return(this._mainBubble);"
+				}
+			]
+		},
+		{
+			"path": "src/game/Pool.ts",
+			"bookmarks": [
+				{
+					"line": 0,
+					"column": 0,
+					"label": "泛型表示T必须是一个无参构造函数，该构造函数类型是InstanceType<T>即T本身的实例类型。这是一个循环引用，但Typescript能处理这种情况"
+				}
+			]
+		},
+		{
+			"path": "src/game/systems/PauseSystem.ts",
+			"bookmarks": [
+				{
+					"line": 74,
+					"column": 0,
+					"label": "且看其他系统如何调用之"
+				}
+			]
+		},
+		{
+			"path": "src/game/systems/PhysicsSystem.ts",
+			"bookmarks": [
+				{
+					"line": 62,
+					"column": 0,
+					"label": "且看其他系统如何调用之"
+				},
+				{
+					"line": 125,
+					"column": 0,
+					"label": "还需要清除CannonSystem中的projectile，否则无法继续开炮"
+				}
+			]
+		},
+		{
+			"path": "src/game/systems/AimSystem.ts",
+			"bookmarks": [
+				{
+					"line": 62,
+					"column": 0,
+					"label": "每次发射的弹珠与上方弹珠结合后，更新屋顶位置，瞄准线将不能超过屋顶线"
+				}
+			]
+		},
+		{
+			"path": "src/game/systems/CannonSystem.ts",
+			"bookmarks": [
+				{
+					"line": 53,
+					"column": 0,
+					"label": "发射出去的弹丸，只能存在一颗飞行中的弹丸"
+				},
+				{
+					"line": 127,
+					"column": 0,
+					"label": "这是我新加的方法"
+				},
+				{
+					"line": 182,
+					"column": 0,
+					"label": "TODO: 看LevelSystem以了解"
+				},
+				{
+					"line": 206,
+					"column": 0,
+					"label": "TODO: 看PhysicalSystem以了解"
+				},
+				{
+					"line": 273,
+					"column": 0,
+					"label": "炮筒的美术资源是-90度的，所以这里要+90度仪修正"
+				}
+			]
+		},
+		{
+			"path": "src/game/systems/LevelSystem.ts",
+			"bookmarks": [
+				{
+					"line": 202,
+					"column": 0,
+					"label": "下面3行都是冗余代码，可以删除"
+				},
+				{
+					"line": 429,
+					"column": 0,
+					"label": "因为remainingChance初始值已经减去第1个type的权重了，所以selection要加1，相当于从第2个type开始"
+				},
+				{
+					"line": 477,
+					"column": 0,
+					"label": "基于列索引判断所在行的期望奇偶性，可参考grid示意图以及笔记"
+				},
+				{
+					"line": 509,
+					"column": 0,
+					"label": "normalize函数将两个气泡之间的位置差向量转换为单位向量（长度为1），只保留方向信息而去除距离影响。标准化后的向量随后通过scale函数进行缩放（boardConfig.bubbleSize * 0.1），这样可以独立控制动画的强度，避免因距离不同而导致动画效果差异过大"
+				},
+				{
+					"line": 523,
+					"column": 0,
+					"label": "tween可能没有then方法，偶现，具体原因不明"
+				},
+				{
+					"line": 528,
+					"column": 0,
+					"label": "(!isCluster && !hasSpecial)这个判断条件放循环外面更好(isCluster || hasSpecial)"
+				},
+				{
+					"line": 531,
+					"column": 0,
+					"label": "只要cluster中有特殊气泡，就会消除特殊气泡"
+				},
+				{
+					"line": 535,
+					"column": 0,
+					"label": "只要cluster中有特殊气泡，就会触发其效果"
+				},
+				{
+					"line": 696,
+					"column": 0,
+					"label": "没必要声明一个hitLine，反而可能出现空指针的情况（偶现，原因不明）"
+				},
+				{
+					"line": 698,
+					"column": 0,
+					"label": "hitLine.j -> gridHit.j"
+				},
+				{
+					"line": 996,
+					"column": 0,
+					"label": "总概率空间等于色彩数乘异质量，异质量随时间递增，逐渐减小相邻色彩数的影响，导致色彩更分散，增加难度"
+				},
+				{
+					"line": 999,
+					"column": 0,
+					"label": "每个色彩有相同的异质量"
+				},
+				{
+					"line": 1008,
+					"column": 0,
+					"label": "应排除邻居中的特殊气泡，详见笔记"
+				},
+				{
+					"line": 1016,
+					"column": 0,
+					"label": "增加相邻色彩数，使出现和相邻泡泡同色的泡泡的概率增大，以增加出现相同色彩聚集的概率，前期减小游戏难度，增加爽感"
+				},
+				{
+					"line": 1029,
+					"column": 0,
+					"label": "由于添加了相邻色彩数，总概率空间也要跟着一起增大"
+				}
+			]
+		},
+		{
+			"path": "src/utils/maths/point.ts",
+			"bookmarks": [
+				{
+					"line": 35,
+					"column": 0,
+					"label": "向量标准化，得到单位向量"
+				}
+			]
+		}
+	]
+}
