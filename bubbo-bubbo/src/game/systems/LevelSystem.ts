@@ -922,6 +922,9 @@ export class LevelSystem implements System {
      * @returns If the given grid positions are valid.
      */
     public isValidGrid(gridI: number, gridJ: number, allowNewLine?: boolean) {
+        if (gridJ < 0 || gridI < 0) {
+            return false;
+        }
         // Get the last line in the grid
         const bottomJ = this.getLine('bottom').j;
 
