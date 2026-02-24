@@ -694,9 +694,9 @@ export class LevelSystem implements System {
      */
     public handleConnect(projectile: Bubble, gridHit: { i: number; j: number }, prioritiseSide?: 'left' | 'right') {
         // Get the line holding the bubble that has been hit
-        const hitLine = this.lines[gridHit.j];
+        // const hitLine = this.lines[gridHit.j];
         // Get the neighbouring coordinates of that hit bubble
-        const neighbours = this._getNeighboursCoord(gridHit.i, hitLine.j);
+        const neighbours = this._getNeighboursCoord(gridHit.i, gridHit.j);
 
         // Initialise an array that will hold the distance of the projectile to each neighboring bubble.
         let distances: { i: number; j: number; distance: number }[] = [];
