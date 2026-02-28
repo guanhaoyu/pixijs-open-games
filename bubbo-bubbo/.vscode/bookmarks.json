@@ -194,6 +194,41 @@
 					"label": "此处把0.4 * 60得到24ms的动画持续时间更好，就不需要在107行每次都delta/60增加除法开销了"
 				}
 			]
+		},
+		{
+			"path": "src/assets.ts",
+			"bookmarks": [
+				{
+					"line": 11,
+					"column": 0,
+					"label": "允许PixiJS正确解析带有视网膜显示前缀的JSON精灵表文件（例如spritesheet@2x.json），使其能够识别文件的分辨率信息，确保在不同设备上正确加载和显示精灵表资源。"
+				},
+				{
+					"line": 12,
+					"column": 0,
+					"label": "创建解析器对象：定义了一个名为resolveJsonUrl的对象，实现了ResolveURLParser接口。"
+				},
+				{
+					"line": 13,
+					"column": 0,
+					"label": "extension：指定类型为ExtensionType.ResolveParser，表示这是一个URL解析器扩展"
+				},
+				{
+					"line": 14,
+					"column": 0,
+					"label": "test：测试函数，检查URL是否包含视网膜显示前缀（如@2x）且以.json结尾"
+				},
+				{
+					"line": 15,
+					"column": 0,
+					"label": "parse：解析函数，直接复用了PixiJS内置的resolveTextureUrl.parse方法"
+				},
+				{
+					"line": 18,
+					"column": 0,
+					"label": "注册扩展：通过extensions.add(resolveJsonUrl)将解析器添加到PixiJS扩展系统中"
+				}
+			]
 		}
 	]
 }
