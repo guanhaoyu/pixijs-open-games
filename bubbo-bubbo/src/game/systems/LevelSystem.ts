@@ -521,7 +521,7 @@ export class LevelSystem implements System {
         }
 
         // Wait for the shimmer effect to end
-        tween.then(() => {
+        tween.then?.(() => {
             // Remove the entire cluster if it a valid size
             cluster.forEach((b) => {
                 // Make sure not to drop the bubble if the new bubble hits a special

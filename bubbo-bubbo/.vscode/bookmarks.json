@@ -26,22 +26,12 @@
 			]
 		},
 		{
-			"path": "src/game/systems/PauseSystem.ts",
-			"bookmarks": [
-				{
-					"line": 74,
-					"column": 0,
-					"label": "且看其他系统如何调用之"
-				}
-			]
-		},
-		{
 			"path": "src/game/systems/PhysicsSystem.ts",
 			"bookmarks": [
 				{
-					"line": 62,
+					"line": 118,
 					"column": 0,
-					"label": "且看其他系统如何调用之"
+					"label": "that should be possible"
 				},
 				{
 					"line": 125,
@@ -74,16 +64,6 @@
 					"label": "这是我新加的方法"
 				},
 				{
-					"line": 182,
-					"column": 0,
-					"label": "TODO: 看LevelSystem以了解"
-				},
-				{
-					"line": 206,
-					"column": 0,
-					"label": "TODO: 看PhysicalSystem以了解"
-				},
-				{
 					"line": 273,
 					"column": 0,
 					"label": "炮筒的美术资源是-90度的，所以这里要+90度仪修正"
@@ -97,6 +77,11 @@
 					"line": 202,
 					"column": 0,
 					"label": "下面3行都是冗余代码，可以删除"
+				},
+				{
+					"line": 240,
+					"column": 0,
+					"label": "此处bubbleSize应该除以2"
 				},
 				{
 					"line": 429,
@@ -177,6 +162,36 @@
 					"line": 35,
 					"column": 0,
 					"label": "向量标准化，得到单位向量"
+				}
+			]
+		},
+		{
+			"path": "src/game/systems/HudSystem.ts",
+			"bookmarks": [
+				{
+					"line": 151,
+					"column": 0,
+					"label": "_scoreCounter中的_base是一个半透明的图info-bg，而_bottomTray是白色的，所以叠加在一起仍然是白色，就看不出来_base了。若想能看到_base，得换一下_scoreCounter和_laserLine的添加顺序，因为_laserLine里有个laser-line-glow图，是蓝色的，半透明图info-bg叠加上去能看出来"
+				}
+			]
+		},
+		{
+			"path": "src/game/systems/ScoreSystem.ts",
+			"bookmarks": [
+				{
+					"line": 47,
+					"column": 0,
+					"label": "bubble计分时的得分动画"
+				}
+			]
+		},
+		{
+			"path": "src/game/systems/EffectsSystem.ts",
+			"bookmarks": [
+				{
+					"line": 104,
+					"column": 0,
+					"label": "此处把0.4 * 60得到24ms的动画持续时间更好，就不需要在107行每次都delta/60增加除法开销了"
 				}
 			]
 		}
